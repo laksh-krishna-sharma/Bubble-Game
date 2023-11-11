@@ -1,4 +1,5 @@
-var time = 61 ;
+var time = 60 ;
+document.querySelector("#timer").textContent = time;
 var score = 0 ; 
 document.querySelector("#scrval").textContent = score;
 var hitnum = 0 ;
