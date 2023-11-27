@@ -4,6 +4,7 @@ var score = 0 ;
 document.querySelector("#scrval").textContent = score;
 var hitnum = 0 ;
 
+// function used to create bubbles
 function makeBubble(){
 
     var clutter = "" ;
@@ -14,6 +15,7 @@ function makeBubble(){
     document.querySelector("#pbtm").innerHTML= clutter;
 }
 
+// function used for running timer and to end game 
 function runTimer() {
 
     var timer = setInterval(function(){
@@ -29,16 +31,20 @@ function runTimer() {
         },1000)
 }
 
+// function used to genrate randome numbers inside bubbles
 function hitNum() {
     hitnum = Math.floor(Math.random()*10)
     document.querySelector('#hitnum').textContent = hitnum;
 }
 
+// function used to count score
 function increaseScore() {
 
     score += 10
     document.querySelector("#scrval").textContent = score;
 }
+
+// function used to create bubbles and to genrate new random numbers in them also to increase score if the number clicked is same as number genrated at hit tab  
 function start() {
     
     document.querySelector("#pbtm")
